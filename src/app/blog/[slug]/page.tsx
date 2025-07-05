@@ -59,7 +59,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
+      description: post.description,
       images: [post.image || "/blog/default.jpg"],
     },
   };
