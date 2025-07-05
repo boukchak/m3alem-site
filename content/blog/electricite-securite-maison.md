@@ -1,5 +1,6 @@
 ---
 title: "Électricité : 10 règles de sécurité à respecter chez vous"
+description: "La sécurité électrique n'est pas à prendre à la légère. Découvrez les 10 règles essentielles pour protéger votre famille et votre domicile des risques électriques."
 excerpt: "La sécurité électrique n'est pas à prendre à la légère. Découvrez les 10 règles essentielles pour protéger votre famille et votre domicile des risques électriques."
 category: "Électricité"
 author: "Équipe M3alem"

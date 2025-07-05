@@ -1,5 +1,6 @@
 ---
 title: "Comment choisir le bon plombier pour vos travaux ?"
+description: "Découvrez nos conseils d'experts pour sélectionner le plombier idéal selon vos besoins et votre budget. Évitez les arnaques et trouvez un professionnel de confiance."
 excerpt: "Découvrez nos conseils d'experts pour sélectionner le plombier idéal selon vos besoins et votre budget. Évitez les arnaques et trouvez un professionnel de confiance."
 category: "Plomberie"
 author: "Équipe M3alem"

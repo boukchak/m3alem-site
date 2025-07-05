@@ -1,5 +1,6 @@
 ---
 title: "DIY : 5 petites réparations que vous pouvez faire vous-même"
+description: "Économisez de l'argent en apprenant à réaliser vous-même ces 5 réparations courantes. Tutoriels détaillés avec photos et liste du matériel nécessaire."
 excerpt: "Économisez de l'argent en apprenant à réaliser vous-même ces 5 réparations courantes. Tutoriels détaillés avec photos et liste du matériel nécessaire."
 category: "DIY"
 author: "Équipe M3alem"
