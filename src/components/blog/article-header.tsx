@@ -7,7 +7,7 @@ interface ArticleHeaderProps {
   post: {
     title: string;
     category: string;
-    excerpt: string;
+    description: string;
   };
 }
 
@@ -30,7 +30,7 @@ export function ArticleHeader({ post }: ArticleHeaderProps) {
           </h1>
           
           <p className="text-xl text-gray-600 leading-relaxed">
-            {post.excerpt}
+            {post.description}
           </p>
         </motion.div>
       </div>
