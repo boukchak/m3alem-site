@@ -8,7 +8,7 @@ interface ArticleMetaProps {
   post: {
     author: string;
     date: string;
-    readTime: string;
+    readTime?: string;
   };
 }
 
@@ -25,10 +25,12 @@ export function ArticleMeta({ post }: ArticleMetaProps) {
         <span>{format(parseISO(post.date), "d MMMM yyyy", { locale: fr })}</span>
       </div>
       
-      <div className="flex items-center mb-2">
-        <Clock className="w-4 h-4 mr-2" />
-        <span>{post.readTime} de lecture</span>
-      </div>
+      {post.readTime && (
+        <div className="flex items-center mb-2">
+          <Clock className="w-4 h-4 mr-2" />
+          <span>{post.readTime} de lecture</span>
+        </div>
+      )}
     </div>
   );
 }

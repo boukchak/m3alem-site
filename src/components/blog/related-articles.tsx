@@ -13,12 +13,12 @@ import { Button } from "@/components/ui/button";
 interface RelatedArticlesProps {
   posts: Array<{
     title: string;
-    excerpt: string;
+    description: string;
     slug: string;
     category: string;
     author: string;
     date: string;
-    readTime: string;
+    readTime?: string;
     image?: string;
   }>;
   currentCategory: string;
@@ -76,7 +76,7 @@ export function RelatedArticles({ posts, currentCategory }: RelatedArticlesProps
                   </h3>
                   
                   <p className="text-gray-600 mb-4 line-clamp-2 flex-grow text-sm">
-                    {post.excerpt}
+                    {post.description}
                   </p>
 
                   <div className="flex items-center text-xs text-gray-500 mb-4 space-x-3">
@@ -84,10 +84,12 @@ export function RelatedArticles({ posts, currentCategory }: RelatedArticlesProps
                       <Calendar className="w-3 h-3 mr-1" />
                       {format(parseISO(post.date), "d MMM yyyy", { locale: fr })}
                     </div>
-                    <div className="flex items-center">
-                      <Clock className="w-3 h-3 mr-1" />
-                      {post.readTime}
-                    </div>
+                    {post.readTime && (
+                      <div className="flex items-center">
+                        <Clock className="w-3 h-3 mr-1" />
+                        {post.readTime}
+                      </div>
+                    )}
                   </div>
 
                   <Link href={`/blog/${post.slug}`} className="mt-auto">

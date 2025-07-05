@@ -27,6 +27,10 @@ export type Post = {
   tags?: string[] | undefined
   /** L'auteur de l'article */
   author: string
+  /** Le temps de lecture estimé (ex: "5 min") */
+  readTime: string
+  /** Un extrait de l'article pour les aperçus */
+  excerpt: string
   /** Le temps de lecture estimé en minutes */
   readingTime?: number | undefined
   /** Article mis en avant */

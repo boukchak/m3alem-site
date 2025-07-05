@@ -6,7 +6,7 @@ const components = {
 };
 
 interface MdxProps {
-  code: string;
+  code: any; // Accepter le type Markdown de Contentlayer
 }
 
 export function Mdx({ code }: MdxProps) {

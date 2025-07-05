@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 interface ShareButtonsProps {
   post: {
     title: string;
-    excerpt: string;
+    description: string;
     slug: string;
   };
 }
@@ -18,7 +18,7 @@ export function ShareButtons({ post }: ShareButtonsProps) {
   
   const currentUrl = typeof window !== "undefined" ? window.location.href : "";
   const encodedTitle = encodeURIComponent(post.title);
-  const encodedExcerpt = encodeURIComponent(post.excerpt);
+  const encodedExcerpt = encodeURIComponent(post.description);
   const encodedUrl = encodeURIComponent(currentUrl);
 
   const shareLinks = {

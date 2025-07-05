@@ -121,7 +121,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
               {/* Contenu de l'article */}
               <div className="prose prose-lg max-w-none">
-                <Mdx code={post.body.code} />
+                <Mdx code={post.body} />
               </div>
 
               {/* Tags */}

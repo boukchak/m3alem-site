@@ -22,7 +22,7 @@ ${sortedPosts
     (post) => `
     <item>
       <title><![CDATA[${post.title}]]></title>
-      <description><![CDATA[${post.excerpt}]]></description>
+      <description><![CDATA[${post.description}]]></description>
       <link>${baseUrl}/blog/${post.slug}</link>
       <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>

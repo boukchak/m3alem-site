@@ -41,6 +41,16 @@ export const Post = defineDocumentType(() => ({
       description: 'L\'auteur de l\'article',
       required: true,
     },
+    readTime: {
+      type: 'string',
+      description: 'Le temps de lecture estimé (ex: "5 min")',
+      required: true,
+    },
+    excerpt: {
+      type: 'string',
+      description: 'Un extrait de l\'article pour les aperçus',
+      required: true,
+    },
     readingTime: {
       type: 'number',
       description: 'Le temps de lecture estimé en minutes',

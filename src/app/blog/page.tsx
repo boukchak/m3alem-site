@@ -15,12 +15,12 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const categories = [
   { name: "Tous les articles", value: "all", count: allPosts.length },
-  { name: "Plomberie", value: "Plomberie", count: allPosts.filter(post => post.category === "Plomberie").length },
-  { name: "Électricité", value: "Électricité", count: allPosts.filter(post => post.category === "Électricité").length },
-  { name: "Peinture", value: "Peinture", count: allPosts.filter(post => post.category === "Peinture").length },
-  { name: "Jardinage", value: "Jardinage", count: allPosts.filter(post => post.category === "Jardinage").length },
-  { name: "DIY", value: "DIY", count: allPosts.filter(post => post.category === "DIY").length },
-  { name: "Actu Maison", value: "Actu Maison", count: allPosts.filter(post => post.category === "Actu Maison").length },
+  { name: "Plomberie", value: "plomberie", count: allPosts.filter(post => post.category === "plomberie").length },
+  { name: "Électricité", value: "electricite", count: allPosts.filter(post => post.category === "electricite").length },
+  { name: "Peinture", value: "peinture", count: allPosts.filter(post => post.category === "peinture").length },
+  { name: "Jardinage", value: "jardinage", count: allPosts.filter(post => post.category === "jardinage").length },
+  { name: "DIY", value: "diy", count: allPosts.filter(post => post.category === "diy").length },
+  { name: "Actu Maison", value: "actu-maison", count: allPosts.filter(post => post.category === "actu-maison").length },
 ];
 
 export default function BlogPage() {
@@ -42,7 +42,7 @@ export default function BlogPage() {
     if (searchTerm) {
       filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
@@ -165,7 +165,7 @@ export default function BlogPage() {
                       {featuredPost.title}
                     </h3>
                     <p className="text-gray-600 mb-6 line-clamp-3">
-                      {featuredPost.excerpt}
+                      {featuredPost.description}
                     </p>
                     
                     <div className="flex items-center text-sm text-gray-500 mb-6 space-x-4">
@@ -176,10 +176,6 @@ export default function BlogPage() {
                       <div className="flex items-center">
                         <User className="w-4 h-4 mr-1" />
                         {featuredPost.author}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {featuredPost.readTime}
                       </div>
                     </div>
 
@@ -246,17 +242,13 @@ export default function BlogPage() {
                       </h3>
                       
                       <p className="text-gray-600 mb-4 line-clamp-3 flex-grow">
-                        {post.excerpt}
+                        {post.description}
                       </p>
 
                       <div className="flex items-center text-sm text-gray-500 mb-4 space-x-4">
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-1" />
                           {format(parseISO(post.date), "d MMM yyyy", { locale: fr })}
-                        </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {post.readTime}
                         </div>
                       </div>
 
